@@ -1,0 +1,16 @@
+{
+  "name": "tip-calculator-app",
+  "version": "1.0.0",
+  "description": "A Project from front End Mentor",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Toriola Samuel",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "regenerator-runtime": "^0.13.10"
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <!-- ------------head--------------- -->
+    <section class="head">
+      <h1>TIP <br />CALC</h1>
+      <!-- ---------------white container---------------- -->
+      <div class="container">
+        <!-- --------------------first half-------------------- -->
+        <div class="io__fields input">
+          <h3>Bill</h3>
+          <form action="">
+            <input type="number" class="first" placeholder="0" required />
+          </form>
+          <!-- -----------------tip selector------------------- -->
+          <h3 class="sub__head">Select Tip</h3>
+          <div class="btns">
+            <button class="tips" data-value="5">5%</button>
+            <button class="tips" data-value="10">10%</button>
+            <button class="tips" data-value="15">15%</button>
+            <button class="tips" data-value="25">25%</button>
+            <button class="tips" data-value="50">50%</button>
+            <input type="number" class="tips custom" placeholder="Custom" />
+          </div>
+          <!-- ------------------people amount selector--------------- -->
+          <h3 class="sub__head">Number of People <span>Can't be zero</span></h3>
+
+          <form action="">
+            <input type="number" class="second" placeholder="0" required />
+          </form>
+        </div>
+        <div class="io__fields output">
+          <div class="calculation">
+            <h3>
+              Tip Amount <br />
+              <em>/ person </em>
+            </h3>
+            <p id="amount">$0.00</p>
+          </div>
+          <div class="calculation">
+            <h3>
+              Total <br />
+              <em>/ person </em>
+            </h3>
+            <p id="total">$0.00</p>
+          </div>
+          <button type="reset" class="reset">RESET</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
+    person Total / person Reset -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by &copy;Samuel Toriola
+    </div> -->
+  </body>
+</html>

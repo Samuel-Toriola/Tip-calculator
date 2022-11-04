@@ -1,0 +1,7 @@
+.parcel-cache
+*.sketch
+*.fig
+*.xd
+.prettierignore
+node_modules
+dist

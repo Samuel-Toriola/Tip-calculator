@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@500&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+}
+:root {
+  --primary-text-color: hsl(172, 67%, 45%);
+  --neutral-text-color: hsl(183, 100%, 15%);
+  --number-color: hsl(183, 97%, 13%);
+  --secondary-text-color: hsl(186, 14%, 43%);
+  --secondary-background-color: hsl(180, 44%, 55%);
+  --tertiary-text-color: hsl(184, 14%, 56%);
+  --primary-background-color: hsl(185, 41%, 84%);
+}
+
+.head {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: var(--primary-background-color);
+}
+.head h1 {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 4px;
+  position: relative;
+  top: 10%;
+  color: var(--secondary-text-color);
+}
+
+/* --------------------white container--------------------- */
+.container {
+  padding: 30px;
+  /* align-items: center; */
+  position: relative;
+  margin: auto;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.51);
+  text-align: center;
+  width: 70%;
+  height: 60%;
+  background-color: white;
+  top: 15%;
+}
+
+/* --------------------first half-------------------- */
+.io__fields {
+  flex-basis: 47%;
+  text-align: left;
+  margin: 20px;
+  height: 100%;
+}
+.io__fields h3 {
+  color: var(--secondary-text-color);
+  padding: 10px 0;
+}
+/* ----------------first input field----------------- */
+form {
+  margin-bottom: 10px;
+}
+form input {
+  font-size: 20px;
+
+  text-align: right;
+  padding: 10px;
+  width: 90%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.07);
+  color: var(--number-color);
+  font-weight: 1000;
+}
+input:focus {
+  border: 2px solid var(--primary-text-color);
+}
+input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.first {
+  background-image: url('./images/icon-dollar.svg');
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+/* --------------------------tip selector-------------- */
+.sub__head {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btns {
+  display: flexbox;
+  width: 100%;
+}
+.tips {
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+  height: 40px;
+  width: 28%;
+  border: none;
+
+  font-size: 20px;
+  color: white;
+  background-color: var(--neutral-text-color);
+}
+/* -----------------------Tip selector active class--------------------- */
+.active {
+  background-color: var(--primary-text-color);
+  color: var(--neutral-text-color);
+}
+/* --------------------------custom field---------------------------- */
+.btns input {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.07);
+  color: var(--neutral-text-color);
+  text-align: right;
+}
+.btns input::placeholder {
+  text-align: center;
+  font-weight: 700;
+  padding-left: 15px;
+  color: var(--neutral-text-color);
+}
+.top:focus {
+  border: 1px solid var(--primary-text-color);
+}
+
+/* -----------------------------number of people---------------------------- */
+/* ----hiddenspan---- */
+span {
+  position: relative;
+  left: 110px;
+  color: rgba(189, 42, 42, 0.913);
+  display: none;
+}
+.hidden {
+  border: 2px solid rgba(189, 42, 42, 0.913);
+}
+/* -------second selector----- */
+.second {
+  background-image: url('./images/icon-person.svg');
+  background-repeat: no-repeat;
+  background-position: 5px 10px;
+}
+
+/* -----------------------------second io field---------------------------- */
+.output {
+  background-color: var(--neutral-text-color);
+  border-radius: 10px;
+  color: white;
+  width: 90%;
+  margin: auto;
+}
+.calculation {
+  display: grid;
+  margin: auto;
+  grid-template-columns: auto auto;
+  padding: 20px;
+  font-size: 15px;
+  height: 20%;
+}
+.calculation h3 {
+  text-align: left;
+  color: white;
+  width: 100%;
+  padding-left: 50px;
+}
+.calculation h3 em {
+  color: rgba(246, 240, 240, 0.5);
+}
+.calculation p {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 40px;
+  color: var(--primary-text-color);
+}
+.reset {
+  position: relative;
+  width: 80%;
+  height: 35px;
+  display: block;
+  margin: auto;
+  border: none;
+  top: 25%;
+  border-radius: 5px;
+  background-color: var(--secondary-background-color);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.reset:active {
+  background-color: hsl(180, 46%, 75%);
+}
+
+/* -----------------------responsive style---------------------------------- */
+@media (min-width: 1400px) {
+  .container {
+    height: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    height: 40%;
+  }
+  .calculation h3 {
+    padding: 0;
+  }
+  .btns input::placeholder {
+    font-size: 17px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    top: 10%;
+    flex-basis: 40%;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border: none;
+  }
+  .io__fields {
+    margin: 5px 20px;
+  }
+  .sub__head {
+    margin: 10px;
+  }
+  .head h1 {
+    top: 5%;
+  }
+  .input::placeholder {
+    font-size: 15px;
+    padding: 0;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+  }
+  .calculation {
+    padding: 0;
+    margin: 20px;
+  }
+  .calculation h3 {
+    text-align: left;
+    padding: 10px 0;
+    font-size: 15px;
+  }
+  .calculation p {
+    font-size: 30px;
+    padding-top: 10px;
+  }
+  .tips {
+    width: 43%;
+  }
+  .reset {
+    top: 10%;
+  }
+  form input {
+    margin-bottom: 0px;
+    padding: 5px;
+  }
+  span {
+    left: 20px;
+  }
+}
+/* -----------------------------smaller responsive--------------------------- */
+@media (max-width: 400px) {
+  .head {
+    height: 100vh;
+  }
+  .head h1 {
+    font-size: 30px;
+  }
+  form {
+    margin-bottom: 0px;
+  }
+  form input {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .first {
+    background-position: 5px;
+  }
+  .sub__head {
+    margin: 0px;
+    padding: 0px;
+  }
+  .tips {
+    margin: 5px;
+    padding: 3px;
+    height: 40px;
+    font-size: 15px;
+    width: 43%;
+  }
+  .container {
+    flex-direction: column;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border: none;
+    align-items: center;
+  }
+  .io__fields {
+    margin: 15px 10px;
+    flex-basis: 35%;
+  }
+  .io__fields h3 {
+    padding: 5px;
+    margin: 5px 0;
+  }
+
+  .head h1 {
+    top: 5%;
+  }
+  .output {
+    margin: 7px 5px;
+  }
+  .input::placeholder {
+    font-size: 15px;
+    padding: 0;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+  }
+  .calculation {
+    padding: 0;
+    margin: 10px;
+  }
+  .calculation h3 {
+    text-align: left;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+  .calculation p {
+    font-size: 25px;
+    padding-top: 10px;
+  }
+
+  .reset {
+    bottom: 10%;
+  }
+  span {
+    left: 20px;
+  }
+}
