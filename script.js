@@ -4,6 +4,8 @@ const tipAmount = document.querySelector('#amount');
 const total = document.querySelector('#total');
 const btnCustom = document.querySelector('.custom');
 const btnReset = document.querySelector('.reset');
+const hide = document.querySelector('.hidden');
+const number = document.querySelector('.second').value;
 
 tipButtons.forEach(btn => {
   btn.addEventListener('click', function (data, people, billValue) {
@@ -45,3 +47,10 @@ tips.forEach(btn => {
 btnReset.addEventListener('click', function (e) {
   location.reload();
 });
+
+const hidden = function () {
+  number === 0
+    ? (hide.style.display = 'inline-block')
+    : (hide.style.display = 'none');
+};
+hidden();
