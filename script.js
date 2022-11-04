@@ -5,7 +5,6 @@ const total = document.querySelector('#total');
 const btnCustom = document.querySelector('.custom');
 const btnReset = document.querySelector('.reset');
 const hide = document.querySelector('.hidden');
-const number = document.querySelector('.second').value;
 
 tipButtons.forEach(btn => {
   btn.addEventListener('click', function (data, people, billValue) {
@@ -16,6 +15,9 @@ tipButtons.forEach(btn => {
 
     const tip = (billValue / people) * (data / 100);
     const totalPerperson = tip + billValue / people;
+    people === 0
+      ? (hide.style.display = 'inline-block')
+      : (hide.style.display = 'none');
 
     tipAmount.textContent = `$${tip.toFixed(2)}`;
     total.textContent = `$${totalPerperson.toFixed(2)}`;
@@ -28,6 +30,7 @@ btnCustom.addEventListener('keyup', function (billValue, people, customTip) {
   const tip = (billValue / people) * (customTip / 100);
   const totalPerperson = tip + billValue / people;
 
+  hidden();
   tipAmount.textContent = `$${tip.toFixed(2)}`;
   total.textContent = `$${totalPerperson.toFixed(2)}`;
 });
@@ -47,10 +50,3 @@ tips.forEach(btn => {
 btnReset.addEventListener('click', function (e) {
   location.reload();
 });
-
-const hidden = function () {
-  number === 0
-    ? (hide.style.display = 'inline-block')
-    : (hide.style.display = 'none');
-};
-hidden();
